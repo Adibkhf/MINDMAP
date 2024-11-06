@@ -1,0 +1,104 @@
+// Mind Map
+digraph {
+	rankdir=LR
+	nodesep=0.4 ranksep=0.4
+	node0 [label="How to choose the optimal CDC
+solution for Big Data project?" fillcolor=lightblue shape=ellipse style=filled]
+	node1 [label="Define Data change frequency
+and volume" fillcolor=lightgreen shape=ellipse style=filled]
+	node0 -> node1 [minlen=1]
+	node2 [label=Low fillcolor=lightcoral shape=ellipse style=filled]
+	node1 -> node2 [minlen=1]
+	node3 [label="Moderate to high" fillcolor=lightcoral shape=ellipse style=filled]
+	node1 -> node3 [minlen=1]
+	node4 [label="Assess Latency requirements" fillcolor=orange shape=ellipse style=filled]
+	node3 -> node4 [minlen=1]
+	node5 [label="Assess Latency requirements" fillcolor=lightgreen shape=ellipse style=filled]
+	node0 -> node5 [minlen=1]
+	node6 [label="Real-Time or Near Real-Time
+(< 1 sec)" fillcolor=lightcoral shape=ellipse style=filled]
+	node5 -> node6 [minlen=1]
+	node7 [label="Captures and applies data
+changes in real-time as they
+happen, ensuring immediate
+updates." fillcolor=lightyellow shape=ellipse style=filled]
+	node6 -> node7 [minlen=1]
+	node8 [label="Evaluate transformation
+complexity" fillcolor=lightgreen shape=ellipse style=filled]
+	node0 -> node8 [minlen=1]
+	node9 [label="Periodic/Batch Processing
+(e.g., 5 min or more)" fillcolor=lightcoral shape=ellipse style=filled]
+	node8 -> node9 [minlen=1]
+	node10 [label="Collects and processes data
+changes periodically at set
+intervals, updating data in
+batches." fillcolor=lightyellow shape=ellipse style=filled]
+	node9 -> node10 [minlen=1]
+	node11 [label="Consider infrastructure and
+integration" fillcolor=lightgreen shape=ellipse style=filled]
+	node0 -> node11 [minlen=1]
+	node12 [label="Cloud-Native Environments" fillcolor=lightcoral shape=ellipse style=filled]
+	node11 -> node12 [minlen=1]
+	node13 [label="Prefer Delta Lake on
+Databricks or BigQuery\"s
+Change Data Capture if
+already invested in the cloud
+for seamless integration" fillcolor=lightyellow shape=ellipse style=filled]
+	node12 -> node13 [minlen=1]
+	node14 [label="On-Premises or Hybrid" fillcolor=lightcoral shape=ellipse style=filled]
+	node11 -> node14 [minlen=1]
+	node15 [label="Kafka as a messaging layer
+with Debezium or Flink for
+flexibility in both real-time
+and on-premises/hybrid setups" fillcolor=lightyellow shape=ellipse style=filled]
+	node14 -> node15 [minlen=1]
+	node16 [label="Consider the Data storage
+destination" fillcolor=lightgreen shape=ellipse style=filled]
+	node0 -> node16 [minlen=1]
+	node17 [label="Data Lake" fillcolor=lightcoral shape=ellipse style=filled]
+	node16 -> node17 [minlen=1]
+	node18 [label="Delta Lake" fillcolor=lightyellow shape=ellipse style=filled]
+	node17 -> node18 [minlen=1]
+	node19 [label="Apache Hudi" fillcolor=lightyellow shape=ellipse style=filled]
+	node17 -> node19 [minlen=1]
+	node20 [label=Iceberg fillcolor=lightyellow shape=ellipse style=filled]
+	node17 -> node20 [minlen=1]
+	node21 [label="CDC in batch with incremental
+updates and upserts" fillcolor=orange shape=ellipse style=filled]
+	node18 -> node21 [minlen=1]
+	node19 -> node21 [minlen=1]
+	node20 -> node21 [minlen=1]
+	node22 [label="Data Warehouse" fillcolor=lightcoral shape=ellipse style=filled]
+	node16 -> node22 [minlen=1]
+	node23 [label="Kafka Connect can push CDC
+data to these warehouses in
+real time" fillcolor=lightyellow shape=ellipse style=filled]
+	node22 -> node23 [minlen=1]
+	node24 [label="Consider native CDC
+capabilities like
+BigQueryâ€™s Dataflow
+templates for ingestion if
+using Google Cloud" fillcolor=lightyellow shape=ellipse style=filled]
+	node22 -> node24 [minlen=1]
+	node25 [label="Select the CDC solution that
+aligns with your needs for
+data speed (real-time or
+batch), transformation
+complexity, and storage type
+(data lake or warehouse).
+Ensure it balances
+performance and cost while
+keeping the pipeline simple
+and scalable. This final
+choice drives efficient data
+updates across your system." fillcolor=gold shape=ellipse style=filled]
+	node15 -> node25 [minlen=1]
+	node4 -> node25 [minlen=1]
+	node13 -> node25 [minlen=1]
+	node10 -> node25 [minlen=1]
+	node23 -> node25 [minlen=1]
+	node7 -> node25 [minlen=1]
+	node2 -> node25 [minlen=1]
+	node24 -> node25 [minlen=1]
+	node21 -> node25 [minlen=1]
+}

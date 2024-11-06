@@ -1,0 +1,24 @@
+How to become a data engineer?
+  What are the essential skills needed for this?
+    Programming languages
+      Python
+        Libraries like Pandas, PySpark
+        Writing efficient code
+      Java
+        Working with big data frameworks
+    Databases
+      SQL
+        Writing optimized queries
+        Working with distributed databases
+      NoSQL
+        When to use NoSQL
+    Big data tools
+      Hadoop
+        HDFS
+        YARN
+      Spark
+        RDDs vs DataFrames
+        Optimizing Spark jobs
+  What's next?
+    theme1
+    theme2

@@ -1,0 +1,26 @@
+How to choose the optimal CDC solution for Big Data project?
+  Define Data change frequency and volume
+    Low
+    Moderate to high
+  Assess Latency requirements => Moderate to high
+  Assess Latency requirements
+    Real-Time or Near Real-Time (< 1 sec)
+      Captures and applies data changes in real-time as they happen, ensuring immediate updates.
+  Evaluate transformation complexity
+    Periodic/Batch Processing (e.g., 5 min or more)
+      Collects and processes data changes periodically at set intervals, updating data in batches.
+  Consider infrastructure and integration
+   	Cloud-Native Environments
+      Prefer Delta Lake on Databricks or BigQuery"s Change Data Capture if already invested in the cloud for seamless integration
+  	On-Premises or Hybrid
+  	  Kafka as a messaging layer with Debezium or Flink for flexibility in both real-time and on-premises/hybrid setups
+  Consider the Data storage destination
+    Data Lake
+      Delta Lake
+      Apache Hudi
+      Iceberg
+      CDC in batch with incremental updates and upserts => Delta Lake, Apache Hudi, Iceberg
+    Data Warehouse
+      Kafka Connect can push CDC data to these warehouses in real time
+      Consider native CDC capabilities like BigQuery’s Dataflow templates for ingestion if using Google Cloud
+FINAL_NODE: Select the CDC solution that aligns with your needs for data speed (real-time or batch), transformation complexity, and storage type (data lake or warehouse). Ensure it balances performance and cost while keeping the pipeline simple and scalable. This final choice drives efficient data updates across your system.  	

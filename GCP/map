@@ -1,0 +1,5 @@
+// Mind Map
+digraph {
+	rankdir=LR
+	node0 [label="What's the necessary services to become a cloud data expert in gcp ?" fillcolor=lightgreen shape=ellipse style=filled]
+}
